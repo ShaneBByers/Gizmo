@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C#: GizmoCPU Debug",
+            "name": "GizmoCPU",
             "type": "dotnet",
             "request": "launch",
             "projectPath": "${workspaceFolder}/GizmoCPU/GizmoCPU.csproj"
