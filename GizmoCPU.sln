@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GizmoCPU", "GizmoCPU", "{A59B23AE-9DAB-451B-9286-40AF3E70D66C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GizmoCPU", "GizmoCPU\GizmoCPU\GizmoCPU.csproj", "{C070CE3F-3E46-41AF-812D-4458D0CD95ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GizmoCPU", "GizmoCPU\GizmoCPU.csproj", "{C070CE3F-3E46-41AF-812D-4458D0CD95ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
