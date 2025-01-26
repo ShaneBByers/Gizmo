@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizmo.Compiler", "Gizmo.Compiler\Gizmo.Compiler.csproj", "{C070CE3F-3E46-41AF-812D-4458D0CD95ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizmo", "Gizmo\Gizmo.csproj", "{249D8F3B-3036-4352-BFF0-4726AF8C60BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizmo.Shared", "Gizmo.Shared\Gizmo.Shared.csproj", "{99A7378F-7092-4B68-AABD-73A4E97A9F3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C070CE3F-3E46-41AF-812D-4458D0CD95ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C070CE3F-3E46-41AF-812D-4458D0CD95ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C070CE3F-3E46-41AF-812D-4458D0CD95ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C070CE3F-3E46-41AF-812D-4458D0CD95ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249D8F3B-3036-4352-BFF0-4726AF8C60BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249D8F3B-3036-4352-BFF0-4726AF8C60BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249D8F3B-3036-4352-BFF0-4726AF8C60BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249D8F3B-3036-4352-BFF0-4726AF8C60BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A7378F-7092-4B68-AABD-73A4E97A9F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A7378F-7092-4B68-AABD-73A4E97A9F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A7378F-7092-4B68-AABD-73A4E97A9F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A7378F-7092-4B68-AABD-73A4E97A9F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C070CE3F-3E46-41AF-812D-4458D0CD95ED} = {A59B23AE-9DAB-451B-9286-40AF3E70D66C}
+	EndGlobalSection
+EndGlobal

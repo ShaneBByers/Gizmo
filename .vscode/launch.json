@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "GizmoCPU",
+            "name": "Gizmo",
             "type": "dotnet",
             "request": "launch",
-            "projectPath": "${workspaceFolder}/GizmoCPU/GizmoCPU.csproj"
+            "projectPath": "${workspaceFolder}/Gizmo/Gizmo.csproj"
         }
 
     ]
