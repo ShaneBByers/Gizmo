@@ -1,21 +1,20 @@
 using Gizmo.Compiler.Entities;
 using Gizmo.Compiler.Entities.Exceptions;
 using Gizmo.Compiler.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace Gizmo.Compiler.Services;
 
-public class GizmoCompiler : IGizmoCompiler
+public class GizmoCompiler(
+    ILoggerFactory loggerFactory) : IGizmoCompiler
 {
-    private readonly IGizmoLexer _gizmoLexer;
-    private readonly IGizmoParser _gizmoParser;
+    private readonly ILogger<GizmoCompiler> _logger = loggerFactory.CreateLogger<GizmoCompiler>();
+    private readonly IGizmoLexer _gizmoLexer = new GizmoLexer();
+    private readonly IGizmoParser _gizmoParser = new GizmoParser();
 
-    public GizmoCompiler()
-    {
-        _gizmoLexer = new GizmoLexer();
-        _gizmoParser = new GizmoParser();
-    }
-
-    public bool TryCompileFiles(IList<GizmoFile> files, out string compiledFileContents)
+    public bool TryCompileFiles(
+        IList<GizmoFile> files,
+        out string compiledFileContents)
     {
         compiledFileContents = string.Empty;
         IList<string> compiledFiles = [];
@@ -44,7 +43,7 @@ public class GizmoCompiler : IGizmoCompiler
         }
         catch (GizmoParserException parserEx)
         {
-            Console.WriteLine(parserEx);
+            _logger.LogError(parserEx, "An error occurred while parsing the file.");
             return false;
         }
 

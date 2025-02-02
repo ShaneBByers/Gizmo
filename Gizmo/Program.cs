@@ -1,11 +1,19 @@
 ﻿using Gizmo.Compiler.Entities;
 using Gizmo.Compiler.Services;
+using Microsoft.Extensions.Logging;
+
+var loggerFactory = LoggerFactory.Create(builder => 
+{
+    builder.AddConsole();
+});
+
+var logger = loggerFactory.CreateLogger<Program>();
 
 IList<string> programFileNames = [
     "TestProgram.txt"
 ];
 
-var gizmoCompiler = new GizmoCompiler();
+var gizmoCompiler = new GizmoCompiler(loggerFactory);
 
 IList<GizmoFile> files = [];
 
