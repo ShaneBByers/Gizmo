@@ -1,4 +1,4 @@
-namespace Gizmo.Shared;
+namespace Gizmo.Compiler.Entities.Enums;
 
 public enum OperatorType
 {

@@ -1,10 +1,12 @@
-﻿using Gizmo.Shared;
+﻿using Gizmo.Compiler.Entities;
+using Gizmo.Compiler.Entities.Enums;
+using Gizmo.Compiler.Interfaces;
 
-namespace Gizmo.Compiler;
+namespace Gizmo.Compiler.Services;
 
-public static class GizmoLexer
+public class GizmoLexer : IGizmoLexer
 {
-    public static IList<LineProgramTokens> GetTokens(string text)
+    public IList<LineProgramTokens> GetTokens(string text)
     {
         IList<string> lines = text.Split(Environment.NewLine);
 
@@ -13,7 +15,7 @@ public static class GizmoLexer
 
     private static LineProgramTokens GetTokensForLine(string line)
     {
-        var programTokens = new List<IProgramToken>();
+        var programTokens = new List<ProgramTokenBase>();
 
         for (int currentPosition = 0; currentPosition < line.Length; currentPosition++)
         {

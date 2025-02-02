@@ -1,4 +1,4 @@
-namespace Gizmo.Compiler;
+namespace Gizmo.Compiler.Entities;
 
 internal class Constants
 {

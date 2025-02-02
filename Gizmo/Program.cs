@@ -1,15 +1,22 @@
-﻿using Gizmo.Compiler;
+﻿using Gizmo.Compiler.Entities;
+using Gizmo.Compiler.Services;
 
-using StreamReader streamReader = new("TestProgram.txt");
-string program = streamReader.ReadToEnd();
+IList<string> programFileNames = [
+    "TestProgram.txt"
+];
 
-var lines = GizmoLexer.GetTokens(program);
+var gizmoCompiler = new GizmoCompiler();
 
-foreach (var line in lines)
+IList<GizmoFile> files = [];
+
+foreach (var programFileName in programFileNames)
 {
-    foreach (var token in line.Tokens)
-    {
-        Console.WriteLine(token);
-    }
-    Console.WriteLine();
+    using StreamReader streamReader = new(programFileName);
+    string programContents = streamReader.ReadToEnd();
+    files.Add(new(programFileName, programContents));
 }
+
+bool wereFilesCompiled = gizmoCompiler.TryCompileFiles(files, out string compiledFileContents);
+
+Console.WriteLine($"Compilation: {(wereFilesCompiled ? "SUCCESS": "FAILED")}");
+Console.WriteLine($"Contents: {compiledFileContents}");

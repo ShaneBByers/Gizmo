@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="../Gizmo.Compiler/Gizmo.Compiler.csproj" />
-    <ProjectReference Include="../Gizmo.Shared/Gizmo.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
